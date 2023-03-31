@@ -1,9 +1,10 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const sizeInput = document.getElementById('size');
-const circleButton = document.getElementById('circle');
-const squareButton = document.getElementById('square');
-const triangleButton = document.getElementById('triangle');
+document.addEventListener('DOMContentLoaded', function() {
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const sizeInput = document.getElementById('size');
+  const circleButton = document.getElementById('circle');
+  const squareButton = document.getElementById('square');
+  const triangleButton = document.getElementById('triangle');
 
 let isDrawing = false;
 let startX, startY;
@@ -83,4 +84,5 @@ squareButton.addEventListener('click', e => {
 triangleButton.addEventListener('click', e => {
   shape = 'triangle';
   drawShape(startX, startY, sizeInput.value);
+});
 });
